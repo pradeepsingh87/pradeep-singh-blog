@@ -1,0 +1,255 @@
+/**
+ * Custom styles for the blog application.
+ * Most styling is handled by Tailwind CSS via CDN.
+ */
+
+/* Prose content styling for blog posts */
+.prose {
+    color: #374151;
+    max-width: 65ch;
+    line-height: 1.75;
+}
+
+.prose h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 0.875rem;
+    line-height: 1.1;
+}
+
+.prose h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.prose h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+}
+
+.prose p {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.prose a {
+    color: #3B82F6;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.prose a:hover {
+    color: #2563EB;
+}
+
+.prose strong {
+    color: #111827;
+    font-weight: 600;
+}
+
+.prose ol {
+    list-style-type: decimal;
+    padding-left: 1.625rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.prose ul {
+    list-style-type: disc;
+    padding-left: 1.625rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.prose li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.prose blockquote {
+    font-weight: 500;
+    font-style: italic;
+    color: #111827;
+    border-left-width: 0.25rem;
+    border-left-color: #E5E7EB;
+    padding-left: 1rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.prose code {
+    color: #111827;
+    font-weight: 600;
+    font-size: 0.875rem;
+    background-color: #F3F4F6;
+    padding: 0.25rem 0.375rem;
+    border-radius: 0.25rem;
+}
+
+.prose pre {
+    color: #E5E7EB;
+    background-color: #1F2937;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+    border-radius: 0.375rem;
+    padding: 1rem 1.25rem;
+}
+
+.prose pre code {
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 0;
+    padding: 0;
+    font-weight: 400;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+.prose img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.prose figure {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.prose figcaption {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 0.875rem;
+    text-align: center;
+}
+
+.prose table {
+    width: 100%;
+    table-layout: auto;
+    text-align: left;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+.prose thead {
+    border-bottom-width: 1px;
+    border-bottom-color: #D1D5DB;
+}
+
+.prose thead th {
+    color: #111827;
+    font-weight: 600;
+    vertical-align: bottom;
+    padding-right: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0.75rem;
+}
+
+.prose tbody tr {
+    border-bottom-width: 1px;
+    border-bottom-color: #E5E7EB;
+}
+
+.prose tbody td {
+    vertical-align: baseline;
+    padding: 0.75rem;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Loading spinner */
+.spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3B82F6;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Focus styles */
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .prose {
+        max-width: none;
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Home</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#8B5CF6'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <style>
+        .prose img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .prose a {
+            color: #3B82F6;
+            text-decoration: underline;
+        }
+        .prose h1, .prose h2, .prose h3 {
+            color: #1F2937;
+            font-weight: 700;
+        }
+        .flash-message {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    
+    
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-xl font-bold text-gray-900 hover:text-primary transition">
+                        Pradeep Singh
+                    </a>
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="../index.html" class="text-gray-600 hover:text-primary transition font-medium">Home</a>
+                        <a href="index.html" class="text-gray-600 hover:text-primary transition font-medium">Blog</a>
+                        <a href="../about/index.html" class="text-gray-600 hover:text-primary transition font-medium">About</a>
+                    </div>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <form action="../search/index.html" method="GET" class="hidden sm:block">
+                        <input type="text" name="q" placeholder="Search..."
+                               class="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </form>
+                    
+                    
+                    
+                    <!-- Mobile menu button -->
+                    <button type="button" onclick="toggleMobileMenu()" class="md:hidden text-gray-600 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200">
+                <div class="px-4 py-3 space-y-2">
+                    <a href="../index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">Home</a>
+                    <a href="index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">Blog</a>
+                    <a href="../about/index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    
+    <!-- Flash Messages -->
+    
+        
+    
+    
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Welcome to the Blog</h1>
+        <p class="text-lg text-gray-600">Discover stories, insights, and ideas.</p>
+    </div>
+    
+    <!-- Posts List -->
+    
+        <div class="space-y-8">
+            
+                <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition">
+                    
+                    
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span>February 08, 2026</span>
+                        </div>
+                        
+                        <h2 class="text-xl font-bold text-gray-900 mb-2">
+                            <a href="../post/turning-databricks-into-an-ai-pair-programmer-with-claude-powered-coding-agents/index.html" class="hover:text-primary transition">
+                                Turning Databricks into an AI pair‑programmer with Claude‑powered coding agents.
+                            </a>
+                        </h2>
+                        
+                        
+                        
+                        <a href="../post/turning-databricks-into-an-ai-pair-programmer-with-claude-powered-coding-agents/index.html" 
+                           class="inline-flex items-center text-primary font-medium hover:underline">
+                            Read more
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            
+        </div>
+        
+        <!-- Pagination -->
+        
+    
+</div>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <p class="text-center text-gray-500 text-sm">
+                &copy; 2026 Pradeep Singh
+            </p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
