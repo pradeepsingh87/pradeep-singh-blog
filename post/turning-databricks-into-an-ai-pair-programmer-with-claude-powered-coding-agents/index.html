@@ -66,6 +66,7 @@
                     <div class="hidden md:flex items-center space-x-4">
                         <a href="../../index.html" class="text-gray-600 hover:text-primary transition font-medium">Home</a>
                         <a href="../../blog/index.html" class="text-gray-600 hover:text-primary transition font-medium">Blog</a>
+                        <a href="../../tags/index.html" class="text-gray-600 hover:text-primary transition font-medium">Tags</a>
                         <a href="../../about/index.html" class="text-gray-600 hover:text-primary transition font-medium">About</a>
                     </div>
                 </div>
@@ -92,6 +93,7 @@
                 <div class="px-4 py-3 space-y-2">
                     <a href="../../index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">Home</a>
                     <a href="../../blog/index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">Blog</a>
+                    <a href="../../tags/index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">Tags</a>
                     <a href="../../about/index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">About</a>
                 </div>
             </div>
@@ -132,7 +134,24 @@
     <div class="prose prose-lg max-w-none">
         <p><span class="ql-size-large">This guide walks through a practical, end‑to‑end setup: installing Claude Code, wiring it to Anthropic models served from Databricks, and configuring authentication so everything “just works” from your terminal and editor. You’ll generate model‑scoped API keys, plug them into Claude’s settings, bypass the default login flow for a smoother developer experience, and finish by testing the workflow directly from the CLI and VS Code.Here are the steps</span></p><p><br></p><h2><a href="https://code.claude.com/docs/en/setup" target="_blank">Install Claude Code </a></h2><p><br></p><h2>Generate API Keys Anthropic Model</h2><p>Login into your databricks workspace.Click on Serving under AI/ML section( Bottom left corner)</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:195/1*k3a5Ok6bfIB0XJsTVzldeg.png" height="237" width="195"></p><p>Serving</p><p>Click on Integrate coding agents(<strong>Get Started</strong>)</p><p><img src="https://miro.medium.com/v2/resize:fit:456/1*cefAahF38laGvN4oYaPyEg.png" height="307" width="456"></p><p>Serving endpoints</p><p>Select Other integrations</p><p>Select a coding integration(Claude Code)</p><p>Select Default Anthropic Model and other options</p><p>Generate API Keys</p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*LeaeC9eSeOJNSmCgYjJ1gA.png" height="586" width="700"></p><h2>Update keys for claude settings</h2><p>Go to ~/.claude/settings.json</p><p><br></p><p>Update / Replace the keys generated from previous step</p><p><br></p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*eGOZXPKTIFVjirHWF_iCMQ.png" height="182" width="700"></p><h2>Override the login method</h2><p>Update/Create ~/.claude/settings.json with following value</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:317/1*njPMErFU5wbjpxJXwCYHkg.png" height="98" width="317"></p><p>This prevents Claude from prompting you to select a login method</p><h2>Install Claude Code for VS Code Plugin</h2><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*yjZ4iUPAhYRNM7UKtf5s8Q.png" height="145" width="700"></p><h2>Test Drive claude</h2><p>We will ask claude code to create a sample datastage.xml job that would mimic the export of a datastage job . Then we will ask it to convert this job to databricks</p><p><br></p><p>Type&nbsp;<strong>claude</strong>&nbsp;. Press enter .</p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*D-kB03U57y-vwa7gLcXnVw.png" height="240" width="700"></p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*Q6WJFT_USythitfTgmkHZQ.png" height="272" width="700"></p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*aG3c8F-D1lNImGwBPEwk0w.png" height="443" width="700"></p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*QitNyUZexr1J-_lVhOOjDA.png" height="302" width="700"></p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*rabxlAubtV1ULbln9TZ-yg.png" height="403" width="700"></p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*SJPvJDJN7HPYaj0HTTB_LQ.png" height="411" width="700"></p><p><br></p><p><br></p>
     </div>
+
     
+        <div class="mt-8 flex flex-wrap items-center gap-2">
+            <span class="text-sm text-gray-500 mr-1">Tags:</span>
+            
+                <a href="../../tag/claude/index.html"
+                   class="inline-flex items-center px-3 py-1 bg-gray-100 hover:bg-primary hover:text-white rounded-full text-sm text-gray-700 transition">
+                    #Claude
+                </a>
+            
+                <a href="../../tag/databricks/index.html"
+                   class="inline-flex items-center px-3 py-1 bg-gray-100 hover:bg-primary hover:text-white rounded-full text-sm text-gray-700 transition">
+                    #Databricks
+                </a>
+            
+        </div>
+    
+
     <!-- Post Footer -->
     <footer class="mt-12 pt-8 border-t border-gray-200">
         <div class="flex items-center justify-between">

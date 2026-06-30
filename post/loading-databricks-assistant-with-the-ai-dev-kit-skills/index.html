@@ -66,6 +66,7 @@
                     <div class="hidden md:flex items-center space-x-4">
                         <a href="../../index.html" class="text-gray-600 hover:text-primary transition font-medium">Home</a>
                         <a href="../../blog/index.html" class="text-gray-600 hover:text-primary transition font-medium">Blog</a>
+                        <a href="../../tags/index.html" class="text-gray-600 hover:text-primary transition font-medium">Tags</a>
                         <a href="../../about/index.html" class="text-gray-600 hover:text-primary transition font-medium">About</a>
                     </div>
                 </div>
@@ -92,6 +93,7 @@
                 <div class="px-4 py-3 space-y-2">
                     <a href="../../index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">Home</a>
                     <a href="../../blog/index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">Blog</a>
+                    <a href="../../tags/index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">Tags</a>
                     <a href="../../about/index.html" class="block text-gray-600 hover:text-primary transition font-medium py-2">About</a>
                 </div>
             </div>
@@ -132,7 +134,29 @@
     <div class="prose prose-lg max-w-none">
         <p>By loading the&nbsp;<strong>Databricks AI Dev Kit</strong>, you can give your Assistant specific domain knowledge — like how to build production-ready pipelines using Spark Declarative Pipelines (SDP).</p><p>Here is a step-by-step guide to expanding your Assistant’s powers with AI Dev KIT.</p><p><br></p><h2>1. Clone the AI Dev Kit</h2><p>First, you need the skill definitions on your workspace.</p><p><br></p><p>Clone the repo in a workspace using git repos . Repo — https://github.com/databricks-solutions/ai-dev-kit.git</p><p>Locate the skills folder in ai-dev-kit and copy them to user home workspace under .assistant folder.</p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*8NMvbpJ_ow0OG8FP4NUotQ.png" height="319" width="700"></p><h2>2. Configure the Assistant’s Skill Registry</h2><p>The Assistant looks for a specific file to know which external skills are available. You need to create a hidden directory and a markdown file in your home folder. Create the file at ~/.assistant/SKILLS.md.</p><p><br></p><h2>3. Map the Skill Paths</h2><p>Now, you need to tell the Assistant exactly where the skills live.</p><p>Copy the full workspace paths for the skills you want to use and paste them into .assistant folder and update your SKILLS.md file (one path per line) with full path for SKILLS.md file for each skill. It should look something like this:</p><p><br></p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*_BuAzp5Wl2A7lDwwI_XAzw.png" height="355" width="700"></p><h2>4. Initialize and Verify</h2><p>Once the paths are saved, it’s time to wake up the Assistant. Action: Open the Assistant pane and type: “Load and list all available skills.”</p><p><br></p><p>If configured correctly, the Assistant will confirm it has indexed the new capabilities.</p><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*MEVdk45iTMDDuk604GelvA.png" height="298" width="700"></p><h2>5. Put the Skills to Work</h2><p>Now that your Assistant is “trained,” let’s use the&nbsp;<strong>Spark Declarative Pipelines (SDP)</strong>&nbsp;skill to bootstrap a project.</p><p><br></p><ol><li><strong>Create a Project Folder:</strong>&nbsp;Set up a new directory in your workspace for your work.</li><li><strong>Enter Agent Mode:</strong>&nbsp;In the Assistant chat, ensure you are using Agent mode for complex task execution.</li><li><strong>Generate the Scaffold:</strong>&nbsp;Ask the Assistant:</li><li><em>“Create a starter SDP project repo using the spark-declarative-pipelines skill.”</em></li></ol><p>Press enter or click to view image in full size</p><p><br></p><p><img src="https://miro.medium.com/v2/resize:fit:700/1*AmoRDNbxtWqEnKOQ3jd4IQ.png" height="312" width="700"></p><h2>6. Refine and Expand</h2><p>The Assistant won’t just give you a template; it can help you build the entire logic. Once the starter files are generated, follow up with:</p><p><br></p><p><em>“Fill in more details for a bronze-to-silver transformation using this schema…”</em></p>
     </div>
+
     
+        <div class="mt-8 flex flex-wrap items-center gap-2">
+            <span class="text-sm text-gray-500 mr-1">Tags:</span>
+            
+                <a href="../../tag/assistant/index.html"
+                   class="inline-flex items-center px-3 py-1 bg-gray-100 hover:bg-primary hover:text-white rounded-full text-sm text-gray-700 transition">
+                    #assistant
+                </a>
+            
+                <a href="../../tag/databricks/index.html"
+                   class="inline-flex items-center px-3 py-1 bg-gray-100 hover:bg-primary hover:text-white rounded-full text-sm text-gray-700 transition">
+                    #Databricks
+                </a>
+            
+                <a href="../../tag/skills/index.html"
+                   class="inline-flex items-center px-3 py-1 bg-gray-100 hover:bg-primary hover:text-white rounded-full text-sm text-gray-700 transition">
+                    #skills
+                </a>
+            
+        </div>
+    
+
     <!-- Post Footer -->
     <footer class="mt-12 pt-8 border-t border-gray-200">
         <div class="flex items-center justify-between">
